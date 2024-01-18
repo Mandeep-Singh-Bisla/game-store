@@ -5,7 +5,7 @@ interface FetchResponse<T>{
     count:number,
     results:T[]
 }
-const  useGenre=<T>(endpoint:string,requestConfig?:AxiosRequestConfig,deps?:any[])=>{
+const  useData=<T>(endpoint:string,requestConfig?:AxiosRequestConfig,deps?:any[])=>{
     const [data, setData] = useState<T[]>([]);
     const [error, setError] = useState("");
     const [isLoading,setLoading]=useState(false);
@@ -26,4 +26,4 @@ const  useGenre=<T>(endpoint:string,requestConfig?:AxiosRequestConfig,deps?:any[
   },deps?[...deps]:[]);
   return {data,error,isLoading};
 }
-export default useGenre; 
+export default useData; 
